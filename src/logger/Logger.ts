@@ -39,7 +39,12 @@ const transports = [
 		filename: 'logs/error.log',
 		level: 'error',
 	}),
-	new winston.transports.File({ filename: 'logs/all.log' }),
+	new winston.transports.Console(),
+	new winston.transports.File({
+		filename: 'logs/http.log',
+		level: 'http',
+	}),
+	// new winston.transports.File({ filename: 'logs/all.log' }),
 ];
 /**
  * custom logger using winston
